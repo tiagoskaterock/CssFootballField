@@ -1,0 +1,112 @@
+<canvas id="myCanvas" width="1250" height="600" style="border:1px solid #000000;"></canvas>
+<script>
+	var canvasSizeX = document.getElementById("myCanvas").width;
+	var canvasSizeY = document.getElementById("myCanvas").height;
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+	ctx.fillStyle = "#007700";
+
+	// campo
+	ctx.fillRect(0, 0, canvasSizeX, canvasSizeY);
+
+	var ctx = canvas.getContext("2d");
+	ctx.strokeStyle = "#FFFFFF";
+	ctx.fillStyle = "#FFFFFF";
+	ctx.lineWidth = 5;
+
+	// linha de cima da grande área à esquerda
+	ctx.moveTo(0, canvasSizeY / 5);
+	ctx.lineTo(canvasSizeX / 5, canvasSizeY / 5);
+	ctx.stroke();
+
+	// linha de cima da pequena área à esquerda
+	ctx.moveTo(0, canvasSizeY / 3);
+	ctx.lineTo(canvasSizeX / 15, canvasSizeY / 3);
+	ctx.stroke();
+
+	// linha de baixo da pequena área à esquerda
+	ctx.moveTo(0, canvasSizeY / 1.5);
+	ctx.lineTo(canvasSizeX / 15, canvasSizeY / 1.5);
+	ctx.stroke();
+
+	// linha de frente da pequena área à esquerda
+	ctx.moveTo(canvasSizeX / 15, canvasSizeY / 1.5);
+	ctx.lineTo(canvasSizeX / 15, canvasSizeY / 3);
+	ctx.stroke();
+
+	// linha de baixo da grande área à esquerda
+	ctx.moveTo(0, canvasSizeY / 1.25);
+	ctx.lineTo(canvasSizeX / 5, canvasSizeY / 1.25);
+	ctx.stroke();
+	
+	// linha da frente da área à esquerda
+	ctx.moveTo(canvasSizeX / 5, canvasSizeY / 5);
+	ctx.lineTo(canvasSizeX / 5, canvasSizeY / 1.25);
+	ctx.stroke();
+
+	// linha central
+	ctx.moveTo(canvasSizeX / 2, 0);
+	ctx.lineTo(canvasSizeX / 2, canvasSizeY );
+	ctx.stroke();
+
+	// linha de cima da área à direita
+	ctx.moveTo(canvasSizeX, canvasSizeY / 5);
+	ctx.lineTo(canvasSizeX - canvasSizeX / 5, canvasSizeY / 5);
+	ctx.stroke();
+
+	// linha de baixo da área à direita
+	ctx.moveTo(canvasSizeX, canvasSizeY / 1.25);
+	ctx.lineTo(canvasSizeX - canvasSizeX / 5, canvasSizeY / 1.25);
+	ctx.stroke();
+
+	// linha de baixo da pequena área à direita
+	ctx.moveTo(canvasSizeX, canvasSizeY / 1.5);
+	ctx.lineTo(canvasSizeX - canvasSizeX / 15, canvasSizeY / 1.5);
+	ctx.stroke();
+
+	// linha de cima da pequena área à direita
+	ctx.moveTo(canvasSizeX, canvasSizeY / 3);
+	ctx.lineTo(canvasSizeX - canvasSizeX / 15, canvasSizeY / 3);
+	ctx.stroke();
+
+	// linha de frente da pequena área à direita
+	ctx.moveTo(canvasSizeX - canvasSizeX / 15, canvasSizeY / 1.5);
+	ctx.lineTo(canvasSizeX - canvasSizeX / 15, canvasSizeY / 3);
+	ctx.stroke();
+
+	// linha da frente da área à direita
+	ctx.moveTo(canvasSizeX - canvasSizeX / 5, canvasSizeY / 5);
+	ctx.lineTo(canvasSizeX - canvasSizeX / 5, canvasSizeY / 1.25);
+	ctx.stroke();
+
+	// círculo central
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.arc(canvasSizeX / 2, canvasSizeY / 2, canvasSizeX / 10, 0, 2 * Math.PI, false);
+	ctx.stroke();
+
+	// marca central
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.arc(canvasSizeX / 2, canvasSizeY / 2, canvasSizeX / 400, 0, 2 * Math.PI, false);
+	ctx.stroke();
+
+	// meia lua da área esquerda
+	// ctx.stroke();
+	// ctx.beginPath();
+	// ctx.arc(canvasSizeX / 7, canvasSizeY / 2, canvasSizeX / 10, 0, 2 * Math.PI, false);
+	// ctx.stroke();
+
+	// marca do pênalti à esquerda
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.arc(canvasSizeX / 7, canvasSizeY / 2, canvasSizeX / 500, 0, 2 * Math.PI, false);
+	ctx.stroke();
+
+	// marca do pênalti à direita
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.arc(canvasSizeX / 1.16, canvasSizeY / 2, canvasSizeX / 500, 0, 2 * Math.PI, false);
+	ctx.stroke();
+
+</script>
